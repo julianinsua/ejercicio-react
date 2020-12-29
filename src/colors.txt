@@ -1,0 +1,6 @@
+background color: #063f6a
+container gradient: #002f51
+monthly payment background: #002a4a
+primary button: #128871
+secondary button: #09436f
+texto: white
