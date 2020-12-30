@@ -10,8 +10,21 @@ export const Calculator = () => {
 	return (
 		<div>
 			<h1>Simulá tu crédito</h1>
-			<Slide min={5000} max={50000} />
-			<Slide min={3} max={24} />
+			<Slide
+				title='MONTO TOTAL'
+				min={5000}
+				max={50000}
+				value={total}
+				changeHandler={setTotal}
+				isMoney
+			/>
+			<Slide
+				title='PLAZO'
+				min={3}
+				max={24}
+				value={term}
+				changeHandler={setTerm}
+			/>
 			<MonthlyPayment total={total} term={term} />
 			<div>
 				<button>OBTENÉ CRÉDITO</button>
