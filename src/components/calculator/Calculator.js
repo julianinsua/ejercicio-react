@@ -8,7 +8,7 @@ export const Calculator = () => {
 	const [term, setTerm] = useState(3);
 
 	return (
-		<div>
+		<div className={classes.Container}>
 			<h1>Simulá tu crédito</h1>
 			<Slide
 				title='MONTO TOTAL'
@@ -26,9 +26,11 @@ export const Calculator = () => {
 				changeHandler={setTerm}
 			/>
 			<MonthlyPayment total={total} term={term} />
-			<div>
-				<button>OBTENÉ CRÉDITO</button>
-				<button>VER DETALLE DE CUOTAS</button>
+			<div className={classes.Buttons}>
+				<button className={classes.Buttons__Credit}>OBTENÉ CRÉDITO</button>
+				<button className={classes.Buttons__Details}>
+					VER DETALLE DE CUOTAS
+				</button>
 			</div>
 		</div>
 	);

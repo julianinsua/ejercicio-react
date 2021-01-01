@@ -1,0 +1,15 @@
+.Container {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #002a4a;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.Container h2 {
+	font-weight: 800;
+	font-size: 2rem;
+	margin: 0;
+}

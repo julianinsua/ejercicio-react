@@ -1,0 +1,40 @@
+.Container {
+	width: 540px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+h1 {
+	font-weight: 800;
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+}
+
+.Buttons {
+	width: 100% !important;
+	display: flex;
+	justify-content: space-between;
+}
+
+.Buttons button {
+	height: 4rem;
+}
+
+.Buttons__Credit {
+	color: white;
+	background-color: #128871;
+	border: none;
+	width: 73%;
+	font-weight: 800;
+	font-size: 1.5rem;
+}
+
+.Buttons__Details {
+	color: white;
+	background-color: #09436f;
+	border: none;
+	width: 25%;
+	font-weight: 1000;
+}

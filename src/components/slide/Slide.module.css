@@ -1,0 +1,33 @@
+.Container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.Header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.Header h2 {
+	font-weight: 200;
+	font-size: large;
+}
+
+.Header input {
+	background-color: rgba(255, 255, 255, 0);
+	border: 2px solid white;
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: white;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.Caption {
+	display: flex;
+	justify-content: space-between;
+}
