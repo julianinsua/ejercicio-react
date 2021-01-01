@@ -14,13 +14,6 @@ export const Slide = (props) => {
 	const minimum = props.isMoney ? formatter.format(props.min) : props.min;
 	const maximum = props.isMoney ? formatter.format(props.min) : props.max;
 
-	useEffect(() => {
-		if (props.value > props.max || props.value < props.min) {
-			window.alert(`El rango debe ser de entre: ${props.min} y ${props.max}.`);
-			props.changeHandler(props.min);
-		}
-	}, [props.max, props.min, props.value]);
-
 	return (
 		<div className={classes.Container}>
 			<div className={classes.Header}>
@@ -33,23 +26,30 @@ export const Slide = (props) => {
 					onChange={(event) => props.changeHandler(event.target.value)}
 				/>
 			</div>
-			<Slider
-				min={props.min}
-				max={props.max}
-				defaultValue={props.min}
-				trackStyle={{ backgroundColor: "white", height: 5 }}
-				handleStyle={{
-					borderColor: "white",
-					height: 15,
-					width: 15,
-					marginTop: -5,
-					backgroundColor: "white",
-				}}
-				railStyle={{ backgroundColor: "white", height: 5 }}
-				onChange={(value) => props.changeHandler(value)}
-				value={props.value}
-			/>
-			<div className={classes.Caption}>
+			<div className={classes.Slider}>
+				<Slider
+					min={props.min}
+					max={props.max}
+					defaultValue={props.min}
+					trackStyle={{ backgroundColor: "white", height: 5 }}
+					handleStyle={{
+						borderColor: "white",
+						height: 15,
+						width: 15,
+						marginTop: -5,
+						backgroundColor: "white",
+					}}
+					railStyle={{ backgroundColor: "white", height: 5 }}
+					onChange={(value) => props.changeHandler(value)}
+					value={props.value}
+				/>
+			</div>
+			<div
+				className={[
+					classes.Caption,
+					props.isMoney ? null : classes.TermCaption,
+				].join(" ")}
+			>
 				<span>{minimum}</span>
 				<span>{maximum}</span>
 			</div>

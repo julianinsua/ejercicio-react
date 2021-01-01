@@ -7,6 +7,11 @@ export const Calculator = () => {
 	const [total, setTotal] = useState(5000);
 	const [term, setTerm] = useState(3);
 
+	const clickHandler = () => {
+		console.log("Total: ", total);
+		console.log("Terms: ", term);
+	};
+
 	return (
 		<div className={classes.Container}>
 			<h1>Simulá tu crédito</h1>
@@ -27,7 +32,9 @@ export const Calculator = () => {
 			/>
 			<MonthlyPayment total={total} term={term} />
 			<div className={classes.Buttons}>
-				<button className={classes.Buttons__Credit}>OBTENÉ CRÉDITO</button>
+				<button className={classes.Buttons__Credit} onClick={clickHandler}>
+					OBTENÉ CRÉDITO
+				</button>
 				<button className={classes.Buttons__Details}>
 					VER DETALLE DE CUOTAS
 				</button>

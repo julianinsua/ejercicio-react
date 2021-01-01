@@ -10,7 +10,7 @@ export const MonthlyPayment = (props) => {
 
 	const moneyPerMonth = useCallback(
 		(total, terms, interest) => {
-			const totalOwed = total * Math.pow(1 + interest, terms);
+			const totalOwed = total * (1 + interest);
 			return formatter.format(totalOwed / terms);
 		},
 		[props.total, props.terms]
@@ -18,7 +18,7 @@ export const MonthlyPayment = (props) => {
 	return (
 		<div className={classes.Container}>
 			<h3>CUOTA FIJA POR MES</h3>
-			<h2>{moneyPerMonth(props.total, props.term, 0.2)}</h2>
+			<h2>{moneyPerMonth(props.total, props.term, 0)}</h2>
 		</div>
 	);
 };

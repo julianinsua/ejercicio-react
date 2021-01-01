@@ -2,18 +2,22 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 }
 
 .Header {
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
 }
 
 .Header h2 {
-	font-weight: 200;
+	font-weight: 300;
 	font-size: large;
 }
 
@@ -25,9 +29,29 @@
 	color: white;
 	padding-left: 1rem;
 	padding-right: 1rem;
+	width: 15%;
+	text-align: center;
+	height: 1.7rem;
+}
+
+.Slider {
+	width: 90%;
+	display: flex;
+	justify-content: center;
 }
 
 .Caption {
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
+}
+
+.TermCaption {
+	width: 90%;
+}
+
+@media (max-width: 560px) {
+	.Header input {
+		width: 30%;
+	}
 }
